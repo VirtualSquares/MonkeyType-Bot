@@ -10,22 +10,26 @@ time.sleep(2)
 
 acceptButton = driver.find_element(By.CLASS_NAME, "acceptAll")
 acceptButton.click()
+time.sleep(3)
 
 def login():
     page = driver.find_element(By.CLASS_NAME, "view-login")
     page.click()
+    time.sleep(2)
 
     email = driver.find_element(By.NAME, "current-email")
-    email.send_keys("[YOUR EMAIL]")
+    email.send_keys("YOUR_EMAIL")
 
     password = driver.find_element(By.NAME, "current-password")
-    password.send_keys("[YOUR PASSWORD]")
+    password.send_keys("YOUR_PASSWORD")
 
     submit = driver.find_element(By.CLASS_NAME, "signIn")
     submit.click()
+    time.sleep(2)
 
     start = driver.find_element(By.CLASS_NAME, "view-start")
     start.click()
+    time.sleep(2)
 
 login()
 
